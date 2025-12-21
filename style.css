@@ -1,0 +1,110 @@
+:root {
+    --nav-color: #ffffff;
+    --nav-hover-color: #1387c1;
+    --nav-mobile-background-color: #213642;
+    --nav-dropdown-background-color: #051117;
+    --nav-dropdown-color: #e7f2f7;
+    --nav-dropdown-hover-color: #1387c1;
+    --background-color: #101a20;
+    --default-color: #e7f2f7;
+    --heading-color: #ffffff;
+    --accent-color: #1387c1;
+    --surface-color: #141f26;
+    --contrast-color: #ffffff;
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+nav{
+    font-family: var(--nav-font);
+    font-size: 15px;
+    color : var(--default-color);
+    display : flex;
+    padding: 30px 70px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+nav div{
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+ height: fit-content;
+}
+
+nav div i{
+    padding-right: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display : flex;
+    gap : 30px;
+    margin: 0;
+    padding : 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    position : relative;
+}
+
+nav a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.5s ease;
+}
+
+nav a:hover::after{
+    opacity: 1;
+    width: 20px;
+}
+
+nav a:focus::after{
+    opacity: 1;
+    width: 20px;
+}
+
+nav a:hover{
+    color: var(--accent-color);
+}
+
+nav a:focus{
+    color: var(--accent-color);
+}
+
+#DropDown{
+    position : relative;
+}
+
+.submenu{
+    position :absolute;
+    top : 40px;
+    left :0;
+    display : block;
+    background-color: #051117;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#DropDown:hover .submenu{
+    opacity : 1;
+    visibility: visible;
+}
+
+.submenu li{
+    padding : 10px 0;
+}
