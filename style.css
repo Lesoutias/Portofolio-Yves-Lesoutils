@@ -84,6 +84,16 @@ nav a:focus{
     color: var(--accent-color);
 }
 
+/* Active nav element styling */
+nav .nav-element.active a {
+    color: var(--accent-color);
+}
+
+nav .nav-element.active a::after {
+    opacity: 1;
+    width: 20px;
+}
+
 #DropDown{
     position : relative;
 }
@@ -108,3 +118,171 @@ nav a:focus{
 .submenu li{
     padding : 10px 0;
 }
+
+section{
+    display : none;
+    justify-items: center;
+}
+
+section.active{
+    display : block;
+}
+
+.portfolio-intro{
+    width : 95%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.identity-description{
+    width: 50%;
+    padding: 20px;
+}
+
+.image-profil{
+    width : 50%;
+    padding: 80px 30px;
+}
+
+.identity-description h1, h2 {
+    font-size: 56px;
+    font-family: var(--heading-font);
+    color :#ffffff
+}
+
+.identity-description h1 span,h2 span{
+    color : var(--accent-color)
+}
+
+.identity-description h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.identity-description p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-family: var(--default-font);
+    padding : 10px 0px;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  color : #ffffff;
+}
+
+.button-intro-portfolio{
+    display : flex;
+    gap : 20px;
+    width: 100%;
+}
+
+.button-works{
+    padding : 15px 25px;
+    font-size: 16px;
+    color : var(--contrast-color);
+    background-color: var(--accent-color);
+    border-radius : 50px;
+    cursor : pointer;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+}
+
+.button-works:hover{
+    transform: translateY(-5px);
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.get-touch{
+    color : var(--accent-color);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+}
+
+.get-touch:hover{
+    background-color: transparent;
+}
+
+.social-media-icons{
+    display : flex;
+    gap : 25px;
+    font-size: 16px;
+    color : var(--default-color);
+    margin-top: 50px;
+}
+
+.social-media-icons i{
+    background-color: color-mix(in srgb, var(--contrast-color), transparent 95%);
+    padding : 10px;
+    border-radius : 50%;
+}
+
+.img-container {
+    width: 90%  ;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url('https://bootstrapmade.com/content/demo/FolioOne/assets/img/profile/profile-square-11.webp');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
+    margin: auto;
+    position: relative ;
+}
+
+.floating-card {
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: var(--surface-color);
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: float 2s ease-in-out infinite;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.floating-card span{
+    font-size: 1rem;
+    color : var(--default-color);
+    font-family: var(--default-font);
+}
+
+.design-card{
+    top: 50px;
+    left: 95%;
+}
+
+.ideas-card{
+    top: 300px;
+    left: 92%;
+}
+
+.code-card{
+    top: 250px;
+    left: 0%;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
